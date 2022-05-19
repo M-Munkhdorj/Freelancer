@@ -20,7 +20,7 @@ public class DBUtils {
             try {
                 FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));
                 root = loader.load();
-                MainSceneController mainSceneController = loader.getController();
+                MainController mainSceneController = loader.getController();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -130,7 +130,7 @@ public class DBUtils {
                     String retrievedPassword = resultSet.getString("password");
                     String retrievedEmail = resultSet.getString("email");
                     if (retrievedPassword.equals(password)) {
-                        changeScene(event, "main-scene.fxml", "Welcome", username, retrievedEmail);
+                        changeScene(event, "navbar.fxml", "Welcome", username, retrievedEmail);
                     } else {
                         System.out.println("passwords did not match");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
