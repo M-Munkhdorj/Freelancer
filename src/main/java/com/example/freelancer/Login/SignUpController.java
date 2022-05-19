@@ -8,9 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,13 +31,29 @@ public class SignUpController implements Initializable {
     @FXML
     private TextField tfUsername;
 
+    @FXML
+    private RadioButton rbFreelancer;
+
+    @FXML
+    private RadioButton rbUser;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ToggleGroup toggleGroup = new ToggleGroup();
+        rbFreelancer.setToggleGroup(toggleGroup);
+        rbUser.setToggleGroup(toggleGroup);
+        rbUser.setSelected(true);
+
         btnContinue.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 if (!tfUsername.getText().trim().isEmpty() && !tfPassword.getText().trim().isEmpty() && !tfEmail.getText().trim().isEmpty()) {
-                    DBUtils.signUpUser(event, tfEmail.getText(), tfUsername.getText(), tfPassword.getText());
+                    if (rbUser.isSelected()) {
+                        DBUtils.signUpUser(event, tfEmail.getText(), tfUsername.getText(), tfPassword.getText(),rbUser.getText());
+                    } else {
+                        DBUtils.signUpUser(event, tfEmail.getText(), tfUsername.getText(), tfPassword.getText(),rbFreelancer.getText());
+                    }
+
                 } else {
                     System.out.println("Please fill in all information");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -52,7 +66,7 @@ public class SignUpController implements Initializable {
         btnSignIn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                DBUtils.changeScene(event, "log-in.fxml", "Log in", null, null);
+                DBUtils.changeScene(event, "login-fxml/log-in.fxml", "Log in", null, null);
             }
         });
     }

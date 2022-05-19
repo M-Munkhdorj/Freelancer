@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class MainController implements Initializable {
+public class NavbarController implements Initializable {
     @FXML
     Button btnLogout;
 
@@ -33,12 +33,12 @@ public class MainController implements Initializable {
         btnLogout.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                DBUtils.changeScene(event, "log-in.fxml", "Login", null, null);
+                DBUtils.changeScene(event, "login-fxml/log-in.fxml", "Login", null, null);
                 System.out.println("HELLO");
             }
         });
         try {
-            Parent fxml = FXMLLoader.load((getClass().getResource("main-scene.fxml")));
+            Parent fxml = FXMLLoader.load((getClass().getResource("user-fxml/user-main-scene.fxml")));
             contentArea.getChildren().removeAll();
             contentArea.getChildren().setAll(fxml);
         } catch (IOException e) {
@@ -48,7 +48,7 @@ public class MainController implements Initializable {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 try {
-                    Parent fxml = FXMLLoader.load(getClass().getResource("digitalservice.fxml"));
+                    Parent fxml = FXMLLoader.load(getClass().getResource("user-fxml/user-digital-service.fxml"));
                     contentArea.getChildren().removeAll();
                     contentArea.getChildren().setAll(fxml);
                 } catch (IOException e) {
@@ -60,7 +60,7 @@ public class MainController implements Initializable {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 try {
-                    Parent fxml = FXMLLoader.load(getClass().getResource("main-scene.fxml"));
+                    Parent fxml = FXMLLoader.load(getClass().getResource("user-fxml/user-main-scene.fxml"));
                     contentArea.getChildren().removeAll();
                     contentArea.getChildren().setAll(fxml);
                 } catch (IOException e) {

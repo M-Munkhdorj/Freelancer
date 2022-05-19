@@ -32,7 +32,7 @@ public class LogInController implements Initializable {
         btnCreateAccount.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                DBUtils.changeScene(event, "sign-up.fxml", "Sign up", null, null);
+                DBUtils.changeScene(event, "login-fxml/sign-up.fxml", "Sign up", null, null);
             }
         });
         btnContinue.setOnAction(new EventHandler<ActionEvent>() {

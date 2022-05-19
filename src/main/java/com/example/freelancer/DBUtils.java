@@ -20,7 +20,7 @@ public class DBUtils {
             try {
                 FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));
                 root = loader.load();
-                MainController mainSceneController = loader.getController();
+//                MainController mainSceneController = loader.getController();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -38,99 +38,189 @@ public class DBUtils {
         stage.show();
     }
 
-    public static void signUpUser(ActionEvent event,String email,String username,String password) {
+    public static void signUpUser(ActionEvent event,String email,String username,String password,String userType) {
         Connection connection = null;
         PreparedStatement psInsert = null;
         PreparedStatement psCheckUserExists = null;
         ResultSet resultSet = null;
-
-        try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/freelancer", "root", "root");
-            psCheckUserExists = connection.prepareStatement("SELECT * FROM users WHERE username=?");
-            psCheckUserExists.setString(1,username);
-            resultSet = psCheckUserExists.executeQuery();
-            if (resultSet.isBeforeFirst()) {
-                System.out.println("User already exists");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("You cannot use this username");
-                alert.show();
-            } else {
-                psInsert = connection.prepareStatement("INSERT INTO users(username,password,email) VALUES(?,?,?)");
-                psInsert.setString(1,username);
-                psInsert.setString(2,password);
-                psInsert.setString(3,email);
-                psInsert.executeUpdate();
-
-                try{
-                    FXMLLoader fxmlLoader = new FXMLLoader(DBUtils.class.getResource("log-in.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    stage.setTitle("Monson University");
-                    stage.setScene(scene);
-                    stage.show();
-                    System.out.println("Successfully registered");
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setContentText("Successfully registered");
+        if (userType.equals("User")) {
+            try {
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/freelancer", "root", "root");
+                psCheckUserExists = connection.prepareStatement("SELECT * FROM users WHERE username=?");
+                psCheckUserExists.setString(1, username);
+                resultSet = psCheckUserExists.executeQuery();
+                if (resultSet.isBeforeFirst()) {
+                    System.out.println("User already exists");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("You cannot use this username");
                     alert.show();
+                } else {
+                    psInsert = connection.prepareStatement("INSERT INTO users(username,password,email,user_type) VALUES(?,?,?,?)");
+                    psInsert.setString(1, username);
+                    psInsert.setString(2, password);
+                    psInsert.setString(3, email);
+                    psInsert.setString(4, userType);
+                    psInsert.executeUpdate();
+
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(DBUtils.class.getResource("login-fxml/log-in.fxml"));
+                        Scene scene = new Scene(fxmlLoader.load());
+                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        stage.setTitle("Monson University");
+                        stage.setScene(scene);
+                        stage.show();
+                        System.out.println("Successfully registered");
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setContentText("Successfully registered");
+                        alert.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
-                catch (IOException e){
-                    e.printStackTrace();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } finally {
+                if (resultSet != null) {
+                    try {
+                        resultSet.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
+                }
+                if (psCheckUserExists != null) {
+                    try {
+                        psCheckUserExists.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
+                }
+                if (psInsert != null) {
+                    try {
+                        psInsert.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
+                }
+                if (connection != null) {
+                    try {
+                        connection.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                 }
             }
-        }catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }finally {
-            if (resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+        } else {
+            try {
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/freelancer", "root", "root");
+                psCheckUserExists = connection.prepareStatement("SELECT * FROM freelancers WHERE username=?");
+                psCheckUserExists.setString(1, username);
+                resultSet = psCheckUserExists.executeQuery();
+                if (resultSet.isBeforeFirst()) {
+                    System.out.println("User already exists");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("You cannot use this username");
+                    alert.show();
+                } else {
+                    psInsert = connection.prepareStatement("INSERT INTO freelancers(username,password,email,user_type) VALUES(?,?,?,?)");
+                    psInsert.setString(1, username);
+                    psInsert.setString(2, password);
+                    psInsert.setString(3, email);
+                    psInsert.setString(4, userType);
+                    psInsert.executeUpdate();
+
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(DBUtils.class.getResource("login-fxml/log-in.fxml"));
+                        Scene scene = new Scene(fxmlLoader.load());
+                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        stage.setTitle("Monson University");
+                        stage.setScene(scene);
+                        stage.show();
+                        System.out.println("Successfully registered");
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setContentText("Successfully registered");
+                        alert.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
-            }
-            if (psCheckUserExists != null) {
-                try {
-                    psCheckUserExists.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } finally {
+                if (resultSet != null) {
+                    try {
+                        resultSet.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                 }
-            }
-            if (psInsert != null) {
-                try {
-                    psInsert.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+                if (psCheckUserExists != null) {
+                    try {
+                        psCheckUserExists.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                 }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+                if (psInsert != null) {
+                    try {
+                        psInsert.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
+                }
+                if (connection != null) {
+                    try {
+                        connection.close();
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
                 }
             }
         }
+
     }
 
     public static void logInUser(ActionEvent event, String username, String password) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
+        PreparedStatement preparedStatement2 = null;
         ResultSet resultSet = null;
+        ResultSet resultSet2 = null;
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/freelancer", "root", "root");
             preparedStatement = connection.prepareStatement("SELECT password, email FROM users WHERE username=?");
+            preparedStatement2 = connection.prepareStatement("SELECT password, email FROM freelancers WHERE username=?");
             preparedStatement.setString(1, username);
+            preparedStatement2.setString(1, username);
             resultSet = preparedStatement.executeQuery();
+            resultSet2 = preparedStatement2.executeQuery();
+
             if (!resultSet.isBeforeFirst()) {
-                System.out.println("User not found");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Provided credentials are incorrect");
-                alert.show();
-            } else {
+                if (!resultSet2.isBeforeFirst()) {
+                    System.out.println("User not found");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Provided credentials are incorrect");
+                    alert.show();
+                }
+                else {
+                    while (resultSet2.next()) {
+                        String retrievedPassword = resultSet2.getString("password");
+                        String retrievedEmail = resultSet2.getString("email");
+                        if (retrievedPassword.equals(password)) {
+                            changeScene(event, "freelancer-fxml/freelancer-main-scene.fxml", "Welcome", username, retrievedEmail);
+                        } else {
+                            System.out.println("passwords did not match");
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setContentText("Provided credentials are incorrect");
+                            alert.show();
+                        }
+                    }
+                }
+            }  else {
                 while (resultSet.next()) {
                     String retrievedPassword = resultSet.getString("password");
                     String retrievedEmail = resultSet.getString("email");
                     if (retrievedPassword.equals(password)) {
-                        changeScene(event, "navbar.fxml", "Welcome", username, retrievedEmail);
+                        changeScene(event, "user-fxml/user-navbar.fxml", "Welcome", username, retrievedEmail);
                     } else {
                         System.out.println("passwords did not match");
                         Alert alert = new Alert(Alert.AlertType.ERROR);
