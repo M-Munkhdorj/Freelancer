@@ -1,4 +1,4 @@
-package com.example.freelancer;
+package com.example.freelancer.User;
 
 public class MainSceneController {
 }

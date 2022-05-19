@@ -1,5 +1,6 @@
-package com.example.freelancer;
+package com.example.freelancer.Login;
 
+import com.example.freelancer.DBUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
