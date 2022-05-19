@@ -34,6 +34,9 @@
     -fx-alignment:center-left;
     -fx-effect: dropshadow(gaussian,grey,10,2%,1,2)
 }
+.buttonContinue:hover{
+        -fx-background-color:#44c86a;
+}
 .buttonCreateAccount{
     -fx-text-fill:#57ff86;
     -fx-background-color:white;
