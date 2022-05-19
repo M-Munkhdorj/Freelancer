@@ -11,8 +11,8 @@ import java.io.IOException;
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("navbar.fxml"));
-//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("log-in.fxml"));
+//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("navbar.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("log-in.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 //        scene.getStylesheets().add(HelloApplication.class.getResource("css/main.css").toExternalForm());
         scene.setFill(Color.web("#81c483"));
