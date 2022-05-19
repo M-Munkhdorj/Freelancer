@@ -1,4 +1,4 @@
-package com.example.freelancer.Freelancer;
+package com.example.freelancer;
 
 import com.example.freelancer.DBUtils;
 import javafx.event.ActionEvent;
@@ -9,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
@@ -18,37 +17,40 @@ import java.util.ResourceBundle;
 
 public class FreelancerNavbarController implements Initializable {
     @FXML
-    Button btnLogout;
+    private Button btnCreateService;
+
+    @FXML
+    private Button btnLogout;
 
     @FXML
     private StackPane contentArea;
 
     @FXML
-    private Label graphicsDesign;
+    private Label freelanceSystem;
 
     @FXML
-    private Label freelanceSystem;
+    private Label graphicsDesign;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnLogout.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 DBUtils.changeScene(event, "login-fxml/log-in.fxml", "Login", null, null);
-                System.out.println("HELLO");
             }
         });
-//        try {
-//            Parent fxml = FXMLLoader.load((getClass().getResource("user-fxml/user-main-scene.fxml")));
-//            contentArea.getChildren().removeAll();
-//            contentArea.getChildren().setAll(fxml);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        try {
+
+            Parent fxml = FXMLLoader.load(getClass().getResource("freelancer-fxml/freelancer-main-scene.fxml"));
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 //        graphicsDesign.setOnMouseClicked(new EventHandler<MouseEvent>() {
 //            @Override
 //            public void handle(MouseEvent mouseEvent) {
 //                try {
-//                    Parent fxml = FXMLLoader.load(getClass().getResource("user-fxml/user-digital-service.fxml"));
+//                    Parent fxml = FXMLLoader.load(getClass().getResource("freelancer-fxml/freelancer-digital-service.fxml"));
 //                    contentArea.getChildren().removeAll();
 //                    contentArea.getChildren().setAll(fxml);
 //                } catch (IOException e) {
@@ -60,7 +62,7 @@ public class FreelancerNavbarController implements Initializable {
 //            @Override
 //            public void handle(MouseEvent mouseEvent) {
 //                try {
-//                    Parent fxml = FXMLLoader.load(getClass().getResource("user-fxml/user-main-scene.fxml"));
+//                    Parent fxml = FXMLLoader.load(getClass().getResource("freelancer-fxml/freelancer-main-scene.fxml"));
 //                    contentArea.getChildren().removeAll();
 //                    contentArea.getChildren().setAll(fxml);
 //                } catch (IOException e) {
@@ -70,7 +72,4 @@ public class FreelancerNavbarController implements Initializable {
 //        });
     }
 
-    public void setUserInformation(String username) {
-
-    }
 }

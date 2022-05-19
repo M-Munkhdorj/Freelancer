@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class NavbarController implements Initializable {
+public class UserNavbarController implements Initializable {
     @FXML
     Button btnLogout;
 
@@ -34,7 +34,6 @@ public class NavbarController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 DBUtils.changeScene(event, "login-fxml/log-in.fxml", "Login", null, null);
-                System.out.println("HELLO");
             }
         });
         try {

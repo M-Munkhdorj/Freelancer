@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" stylesheets="@../css/homePage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.Freelancer.FreelancerNavbarController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" stylesheets="@../css/homePage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.FreelancerNavbarController">
     <children>
         <VBox maxWidth="1600.0" prefHeight="1000.0" prefWidth="1410.0">
             <children>
@@ -59,11 +59,11 @@
                         <HBox alignment="TOP_CENTER" prefHeight="97.0" prefWidth="282.0" spacing="20.0">
                             <children>
                                 <Button fx:id="btnLogout" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="95.0" styleClass="buttonLogOut" text="Log Out" textAlignment="CENTER" />
-                        <Button fx:id="btnLogout1" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="buttonLogOut" text="Create Service" textAlignment="CENTER" />
+                                <Button fx:id="btnCreateService" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="buttonLogOut" text="Create Service" textAlignment="CENTER" />
                             </children>
-                     <padding>
-                        <Insets top="35.0" />
-                     </padding>
+                            <padding>
+                                <Insets top="35.0" />
+                            </padding>
                         </HBox>
                     </children>
                 </HBox>

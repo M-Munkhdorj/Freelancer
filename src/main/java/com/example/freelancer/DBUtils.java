@@ -206,7 +206,7 @@ public class DBUtils {
                         String retrievedPassword = resultSet2.getString("password");
                         String retrievedEmail = resultSet2.getString("email");
                         if (retrievedPassword.equals(password)) {
-                            changeScene(event, "freelancer-fxml/freelancer-main-scene.fxml", "Welcome", username, retrievedEmail);
+                            changeScene(event, "freelancer-fxml/freelancer-navbar.fxml", "Welcome", username, retrievedEmail);
                         } else {
                             System.out.println("passwords did not match");
                             Alert alert = new Alert(Alert.AlertType.ERROR);
