@@ -34,6 +34,9 @@
     -fx-alignment:center;
     -fx-effect: dropshadow(gaussian,grey,10,2%,1,2)
 }
+.buttonLogOut:hover{
+        -fx-background-color:white;
+}
 .buttonCreateAccount{
     -fx-text-fill:#57ff86;
     -fx-background-color:white;
@@ -55,6 +58,9 @@
     -fx-font-weight:700;
     -fx-alignment:center-left
 }
+.textHeader:hover{
+    -fx-text-fill:grey;
+}
 .textMain{
      -fx-text-fill:#667080;
      -fx-font-family: 'Helvetica', Arial, sans-serif;
@@ -62,6 +68,17 @@
      -fx-font-size:17px;
      -fx-font-weight:300;
      -fx-text-alignment:center;
+ }
+ .textNavBar{
+      -fx-text-fill:#667080;
+      -fx-font-family: 'Helvetica', Arial, sans-serif;
+      -fx-font-style:normal;
+      -fx-font-size:17px;
+      -fx-font-weight:300;
+      -fx-text-alignment:center;
+  }
+ .textNavBar:hover{
+      -fx-text-fill:black
  }
 .image-view {
     -fx-stroke-width: 2.0;

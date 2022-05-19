@@ -23,7 +23,7 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="graphicsDesign" alignment="CENTER" styleClass="textMain" text="Graphics &amp; Design">
+                  <Label fx:id="graphicsDesign" alignment="CENTER" styleClass="textNavBar" text="Graphics &amp; Design">
                      <font>
                         <Font size="13.0" />
                      </font>
@@ -31,27 +31,27 @@
                         <Insets left="10.0" top="20.0" />
                      </padding>
                   </Label>
-                  <Label styleClass="textMain" text="Digital Marketing">
+                  <Label styleClass="textNavBar" text="Digital Marketing">
                      <padding>
                         <Insets left="10.0" top="20.0" />
                      </padding>
                   </Label>
-                  <Label styleClass="textMain" text="Writing &amp; Translation">
+                  <Label styleClass="textNavBar" text="Writing &amp; Translation">
                      <padding>
                         <Insets left="10.0" top="20.0" />
                      </padding>
                   </Label>
-                  <Label styleClass="textMain" text="Video &amp; Animations">
+                  <Label styleClass="textNavBar" text="Video &amp; Animations">
                      <padding>
                         <Insets left="10.0" top="20.0" />
                      </padding>
                   </Label>
-                  <Label styleClass="textMain" text="Programming &amp; Tech">
+                  <Label styleClass="textNavBar" text="Programming &amp; Tech">
                      <padding>
                         <Insets left="10.0" top="20.0" />
                      </padding>
                   </Label>
-                  <Label prefHeight="40.0" prefWidth="107.0" styleClass="textMain" text="Business">
+                  <Label prefHeight="40.0" prefWidth="107.0" styleClass="textNavBar" text="Business">
                      <padding>
                         <Insets left="10.0" top="20.0" />
                      </padding>
