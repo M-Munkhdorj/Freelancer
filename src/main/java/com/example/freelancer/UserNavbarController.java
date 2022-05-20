@@ -13,7 +13,6 @@ import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class UserNavbarController implements Initializable {
