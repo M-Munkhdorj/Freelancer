@@ -340,7 +340,39 @@ public class DBUtils {
         }
         return serviceData;
     }
-
+    public static ObservableList<Service> getServiceType(String serviceType) {
+        ObservableList<Service> serviceData = FXCollections.observableArrayList();
+        Connection connection = null;
+        PreparedStatement psCheckExists;
+        ResultSet resultSet;
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/freelancer", "root", "root");
+            psCheckExists = connection.prepareStatement("SELECT * FROM services WHERE service_type=?");
+            psCheckExists.setString(1, serviceType);
+            resultSet = psCheckExists.executeQuery();
+            if (resultSet.isBeforeFirst()) {
+                while (resultSet.next()) {
+                    serviceData.add(new Service(resultSet.getString("service_type"),
+                            resultSet.getString("service_name"),
+                            resultSet.getString("service_description"),
+                            resultSet.getString("service_delivery_time"),
+                            resultSet.getString("service_price"),
+                            resultSet.getString("service_image_path")));
+                }
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        return serviceData;
+    }
 
 }
  

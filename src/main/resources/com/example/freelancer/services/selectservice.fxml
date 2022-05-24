@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <Group xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.Service.ServiceSelectController">
    <children>
       <Pane prefHeight="650.0" prefWidth="1200.0">
@@ -27,7 +26,7 @@
             </HBox>
             <HBox layoutX="33.0" layoutY="166.0" prefHeight="34.0" prefWidth="200.0">
                <children>
-                  <Label prefHeight="21.0" prefWidth="101.0" text="Service Details">
+                  <Label fx:id="lblServiceType" prefHeight="21.0" prefWidth="186.0" text="Service Details">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -36,7 +35,7 @@
             </HBox>
             <VBox layoutX="669.0" layoutY="158.0" prefHeight="400.0" prefWidth="450.0" style="-fx-border-radius: 10px; -fx-border-color: black;">
                <children>
-                  <Label text="Service Name">
+                  <Label fx:id="lblServiceName" text="Service Name">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -44,32 +43,51 @@
                         <Insets left="15.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <TextArea prefHeight="200.0" prefWidth="200.0" text="Service details in here&#10;">
+                  <TextArea fx:id="txtAreaServiceDescription" prefHeight="200.0" prefWidth="200.0">
                      <VBox.margin>
                         <Insets left="15.0" right="15.0" />
                      </VBox.margin>
                   </TextArea>
-                  <Label text="Delivery time">
-                     <VBox.margin>
-                        <Insets left="15.0" top="15.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="312.0" text="Button">
+                  <HBox prefHeight="34.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label text="Delivery time:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblServiceDeliveryTime" text="Delivery time">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Price:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblServicePrice" text="Price">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </HBox>
+                  <Button fx:id="btBuy" mnemonicParsing="false" prefHeight="35.0" prefWidth="312.0" text="Buy">
                      <VBox.margin>
                         <Insets left="70.0" right="70.0" top="15.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="312.0" text="Button">
+                  <Button fx:id="btnClose" mnemonicParsing="false" prefHeight="35.0" prefWidth="312.0" text="Close">
                      <VBox.margin>
                         <Insets left="70.0" right="70.0" top="15.0" />
                      </VBox.margin>
                   </Button>
                </children>
             </VBox>
-            <ImageView fitHeight="331.0" fitWidth="591.0" layoutX="33.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageView" fitHeight="350.0" fitWidth="600.0" layoutX="33.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </children>

@@ -12,16 +12,15 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 //        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("user-fxml/user-navbar.fxml"));
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("freelancer-fxml/freelancer-navbar.fxml"));
-//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-fxml/log-in.fxml"));
+//        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("freelancer-fxml/freelancer-navbar.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-//        scene.getStylesheets().add(HelloApplication.class.getResource("css/main.css").toExternalForm());
         scene.setFill(Color.web("#81c483"));
         stage.setTitle("Freelancer System");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
+    FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-fxml/log-in.fxml"));
 
     public static void main(String[] args) {
         launch();
