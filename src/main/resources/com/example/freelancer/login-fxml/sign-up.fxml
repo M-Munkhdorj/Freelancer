@@ -6,19 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1000.0" prefWidth="1600.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.Login.SignUpController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.Login.SignUpController">
    <children>
-      <TextField fx:id="tfUsername" layoutX="650.0" layoutY="414.0" prefHeight="50.0" prefWidth="300.0" promptText="John Doe" />
-      <Text fill="#667080" layoutX="650.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Username" />
-      <Button fx:id="btnContinue" layoutX="650.0" layoutY="629.0" mnemonicParsing="false" onMousePressed="#onContinueButtonPressed" onMouseReleased="#onContinueButtonReleased" prefHeight="50.0" prefWidth="300.0" styleClass="buttonContinue" text="Continue" />
-      <TextField fx:id="tfPassword" layoutX="650.0" layoutY="497.0" prefHeight="50.0" prefWidth="300.0" />
-      <Text fill="#667080" layoutX="650.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Password" />
-      <Text fill="#667080" layoutX="650.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textNotUser" text="Already a user?" />
-      <Button fx:id="btnSignIn" layoutX="650.0" layoutY="708.0" mnemonicParsing="false" onMousePressed="#onSignInButtonPressed" onMouseReleased="#onSignInButtonReleased" prefHeight="50.0" prefWidth="200.0" styleClass="buttonCreateAccount" text="Sign in" />
-      <TextField fx:id="tfEmail" layoutX="650.0" layoutY="331.0" prefHeight="50.0" prefWidth="300.0" promptText="example@gmail.com" />
-      <Text fill="#667080" layoutX="650.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Email" />
-      <Text fill="#667080" layoutX="650.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Are you freelancer or user?" />
-      <RadioButton fx:id="rbUser" layoutX="648.0" layoutY="588.0" mnemonicParsing="false" text="User" />
-      <RadioButton fx:id="rbFreelancer" layoutX="800.0" layoutY="588.0" mnemonicParsing="false" text="Freelancer" />
+      <TextField fx:id="tfUsername" layoutX="451.0" layoutY="256.0" prefHeight="50.0" prefWidth="300.0" promptText="John Doe" />
+      <Text fill="#667080" layoutX="451.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Username" />
+      <Button fx:id="btnContinue" layoutX="451.0" layoutY="471.0" mnemonicParsing="false" onMousePressed="#onContinueButtonPressed" onMouseReleased="#onContinueButtonReleased" prefHeight="50.0" prefWidth="300.0" styleClass="buttonContinue" text="Continue" />
+      <TextField fx:id="tfPassword" layoutX="451.0" layoutY="339.0" prefHeight="50.0" prefWidth="300.0" />
+      <Text fill="#667080" layoutX="451.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Password" />
+      <Text fill="#667080" layoutX="451.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textNotUser" text="Already a user?" />
+      <Button fx:id="btnSignIn" layoutX="451.0" layoutY="550.0" mnemonicParsing="false" onMousePressed="#onSignInButtonPressed" onMouseReleased="#onSignInButtonReleased" prefHeight="50.0" prefWidth="200.0" styleClass="buttonCreateAccount" text="Sign in" />
+      <TextField fx:id="tfEmail" layoutX="451.0" layoutY="173.0" prefHeight="50.0" prefWidth="300.0" promptText="example@gmail.com" />
+      <Text fill="#667080" layoutX="451.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Email" />
+      <Text fill="#667080" layoutX="451.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Are you freelancer or user?" />
+      <RadioButton fx:id="rbUser" layoutX="449.0" layoutY="430.0" mnemonicParsing="false" text="User" />
+      <RadioButton fx:id="rbFreelancer" layoutX="601.0" layoutY="430.0" mnemonicParsing="false" text="Freelancer" />
    </children>
 </AnchorPane>

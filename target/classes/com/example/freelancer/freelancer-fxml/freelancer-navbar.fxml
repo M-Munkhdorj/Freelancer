@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" stylesheets="@../css/homePage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.FreelancerNavbarController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" stylesheets="@../css/homePage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.FreelancerNavbarController">
     <children>
-        <VBox maxWidth="1600.0" prefHeight="1000.0" prefWidth="1410.0">
+        <VBox maxWidth="1600.0" prefHeight="750.0" prefWidth="1200.0">
             <children>
-                <HBox alignment="CENTER_LEFT" minWidth="1600.0" prefHeight="100.0" prefWidth="1600.0" spacing="15.0">
+                <HBox alignment="CENTER_LEFT" minWidth="1200.0" prefHeight="50.0" prefWidth="1263.0" spacing="10.0">
                     <children>
                         <Label fx:id="freelanceSystem" contentDisplay="CENTER" styleClass="textHeader" text="Freelance System">
                             <padding>
@@ -51,25 +51,25 @@
                                 <Insets left="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="107.0" styleClass="textNavBar" text="Business">
+                        <Label prefHeight="40.0" prefWidth="71.0" styleClass="textNavBar" text="Business">
                             <padding>
                                 <Insets left="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <HBox alignment="TOP_CENTER" prefHeight="97.0" prefWidth="282.0" spacing="20.0">
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="221.0" spacing="10.0">
                             <children>
                                 <Button fx:id="btnLogout" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="95.0" styleClass="buttonLogOut" text="Log Out" textAlignment="CENTER" />
                                 <Button fx:id="btnCreateService" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="buttonLogOut" text="Create Service" textAlignment="CENTER" />
                             </children>
                             <padding>
-                                <Insets top="35.0" />
+                                <Insets top="15.0" />
                             </padding>
                         </HBox>
                     </children>
                 </HBox>
-                <AnchorPane prefHeight="907.0" prefWidth="1600.0">
+                <AnchorPane prefHeight="650.0" prefWidth="1200.0">
                     <children>
-                        <StackPane fx:id="contentArea" layoutY="-20.0" prefHeight="900.0" prefWidth="1600.0" />
+                        <StackPane fx:id="contentArea" prefHeight="701.0" prefWidth="1200.0" />
                     </children>
                 </AnchorPane>
             </children>

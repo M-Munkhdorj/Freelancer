@@ -18,6 +18,7 @@ public class MainApplication extends Application {
         scene.setFill(Color.web("#81c483"));
         stage.setTitle("Freelancer System");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

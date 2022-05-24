@@ -26,11 +26,11 @@
     -fx-text-fill:#667080;
     -fx-background-color:#57ff86;
     -fx-background-radius:10px;
-    -fx-background-insets: 1px;
+    -fx-background-insets: 4px;
     -fx-font-family: 'Helvetica', Arial, sans-serif;
     -fx-font-style:normal;
     -fx-font-weight:700;
-    -fx-font-size:15px;
+    -fx-font-size:12px;
     -fx-alignment:center;
     -fx-effect: dropshadow(gaussian,grey,10,2%,1,2)
 }
@@ -49,13 +49,13 @@
     -fx-font-style:normal;
     -fx-font-weight:700;
     -fx-alignment:center;
-    -fx-font-size:15px;
+    -fx-font-size:12px;
 }
 .textHeader{
     -fx-text-fill:black;
     -fx-font-family: 'Helvetica', Arial, sans-serif;
     -fx-font-style:normal;
-    -fx-font-size:35px;
+    -fx-font-size:20px;
     -fx-font-weight:700;
     -fx-alignment:center-left
 }
@@ -74,7 +74,7 @@
       -fx-text-fill:#667080;
       -fx-font-family: 'Helvetica', Arial, sans-serif;
       -fx-font-style:normal;
-      -fx-font-size:17px;
+      -fx-font-size:13px;
       -fx-font-weight:300;
       -fx-text-alignment:center;
   }

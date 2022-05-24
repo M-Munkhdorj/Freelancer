@@ -10,6 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,7 +28,10 @@ public class LogInController implements Initializable {
     private TextField tfUsername;
     @FXML
     private TextField tfPassword;
-
+    @FXML
+    private AnchorPane anchorPane;
+    @FXML
+    private Pane pane;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnCreateAccount.setOnAction(new EventHandler<ActionEvent>() {

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1000.0" prefWidth="1600.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.Freelancer.FreelancerCreateServiceController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.Freelancer.FreelancerCreateServiceController">
     <children>
         <Text fill="#667080" layoutX="79.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Description" />
         <Button fx:id="btnContinue" layoutX="81.0" layoutY="577.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" styleClass="buttonContinue" text="Continue" />
