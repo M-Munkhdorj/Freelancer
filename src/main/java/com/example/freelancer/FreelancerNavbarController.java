@@ -161,5 +161,17 @@ public class FreelancerNavbarController implements Initializable {
             }
         });
     }
+    public void changeContentArea() {
+        try {
+            Parent fxml = FXMLLoader.load(getClass().getResource("services/selectservice.fxml"));
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+            System.out.println(contentArea.getChildren().setAll(fxml));
+        } catch (IOException e) {
+            e.printStackTrace();
 
+        }
+        graphicsDesign.setText("sda");
+
+    }
 }

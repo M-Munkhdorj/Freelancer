@@ -62,6 +62,9 @@
 .textHeader:hover{
     -fx-text-fill:grey;
 }
+.text:hover{
+    -fx-text-fill:grey;
+}
 .textMain{
      -fx-text-fill:#667080;
      -fx-font-family: 'Helvetica', Arial, sans-serif;

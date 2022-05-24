@@ -148,7 +148,14 @@ public class UserNavbarController implements Initializable {
 
     }
 
-    public void setUserInformation(String username) {
-
+    public void changeContentArea() {
+        try {
+            Parent fxml = FXMLLoader.load(getClass().getResource("services/service-business.fxml"));
+            contentArea.getChildren().removeAll();
+            contentArea.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
+

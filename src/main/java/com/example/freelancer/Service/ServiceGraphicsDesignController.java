@@ -1,16 +1,28 @@
 package com.example.freelancer.Service;
 
 import com.example.freelancer.DBUtils;
+import com.example.freelancer.FreelancerNavbarController;
 import com.example.freelancer.Model.Service;
+import com.example.freelancer.UserNavbarController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -45,6 +57,10 @@ public class ServiceGraphicsDesignController implements Initializable {
     private Text txt14;
     @FXML
     private Text txt15;
+//    private FreelancerNavbarController navbarController;
+//    public void changeContentArea(FreelancerNavbarController navbarController) {
+//        this.navbarController = navbarController;
+//    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<Service> service = FXCollections.observableArrayList();
@@ -83,6 +99,31 @@ public class ServiceGraphicsDesignController implements Initializable {
             Image image5 = new Image(service.get(5).getImagePath(),200,500,false,false);
             imgView5.setImage(image5);
             txt15.setText(service.get(5).getPrice());
+
         }
+
+         imgView1.setOnMousePressed(new EventHandler<MouseEvent>() {
+             @Override
+             public void handle(MouseEvent mouseEvent) {
+                 FXMLLoader fxmlLoader = new FXMLLoader(FreelancerNavbarController.class.getResource("freelancer-fxml/freelancer-navbar.fxml"));
+                 try {
+                     Parent root = fxmlLoader.load();
+                     FreelancerNavbarController freelancerNavbarController = fxmlLoader.getController();
+                     freelancerNavbarController.changeContentArea();
+                 } catch (IOException e) {
+                     e.printStackTrace();
+                 }
+             }
+         });
+
+
+//        imgView1.setOnMousePressed(new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent mouseEvent) {
+//                FXMLLoader loader = new FXMLLoader(FreelancerNavbarController.class.getResource("services/service-graphics-design.fxml"));
+//                ServiceGraphicsDesignController controller = loader.getController();
+//                controller.changeContentArea(navbarController);
+//            }
+//        });
     }
 }
