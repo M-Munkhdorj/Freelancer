@@ -69,7 +69,6 @@ public class DBUtils {
                         FXMLLoader fxmlLoader = new FXMLLoader(DBUtils.class.getResource("login-fxml/log-in.fxml"));
                         Scene scene = new Scene(fxmlLoader.load());
                         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                        stage.setTitle("Monson University");
                         stage.setScene(scene);
                         stage.show();
                         System.out.println("Successfully registered");
@@ -135,7 +134,6 @@ public class DBUtils {
                         FXMLLoader fxmlLoader = new FXMLLoader(DBUtils.class.getResource("login-fxml/log-in.fxml"));
                         Scene scene = new Scene(fxmlLoader.load());
                         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                        stage.setTitle("Monson University");
                         stage.setScene(scene);
                         stage.show();
                         System.out.println("Successfully registered");

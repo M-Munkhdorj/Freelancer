@@ -10,6 +10,7 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 public class FreelancerCreateServiceController implements Initializable {
@@ -43,8 +44,14 @@ public class FreelancerCreateServiceController implements Initializable {
         btnChooseImage.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                String userDirectoryString = System.getProperty("user.home");
+                File userDirectory = new File(userDirectoryString);
+                if(!userDirectory.canRead()) {
+                    userDirectory = new File("c:/");
+                }
                 FileChooser fc = new FileChooser();
-                fc.setInitialDirectory(new File("C:\\Users\\muudu\\Desktop\\2022 Spring\\Program hangamjiin hugjuulelt"));
+                String currentPath = Paths.get(".src/main/resources/com/example/freelancer/images").toAbsolutePath().normalize().toString();
+                fc.setInitialDirectory(new File(String.valueOf(userDirectory)));
                 fc.getExtensionFilters().addAll(
                         new FileChooser.ExtensionFilter("Image files", "*.jpg", "*.png", "*.jpeg"));
                 File selectedImage = fc.showOpenDialog(null);
@@ -60,7 +67,7 @@ public class FreelancerCreateServiceController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 if (
-                        !choiceBoxServiceType.getValue().trim().isEmpty() &&
+                        !choiceBoxServiceType.isShowing() &&
                         !tfServiceName.getText().trim().isEmpty() &&
                         !txtAreaDescription.getText().trim().isEmpty() &&
                         !tfDeliveryTime.getText().trim().isEmpty() &&

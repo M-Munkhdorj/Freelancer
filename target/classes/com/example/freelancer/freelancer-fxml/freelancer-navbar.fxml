@@ -31,27 +31,27 @@
                                 <Insets left="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <Label styleClass="textNavBar" text="Digital Marketing">
+                        <Label fx:id="digitalMarketing" styleClass="textNavBar" text="Digital Marketing">
                             <padding>
                                 <Insets left="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <Label styleClass="textNavBar" text="Writing &amp; Translation">
+                        <Label fx:id="writingTranslation" styleClass="textNavBar" text="Writing &amp; Translation">
                             <padding>
                                 <Insets left="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <Label styleClass="textNavBar" text="Video &amp; Animations">
+                        <Label fx:id="videoAnimation" styleClass="textNavBar" text="Video &amp; Animations">
                             <padding>
                                 <Insets left="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <Label styleClass="textNavBar" text="Programming &amp; Tech">
+                        <Label fx:id="programmingTech" styleClass="textNavBar" text="Programming &amp; Tech">
                             <padding>
                                 <Insets left="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <Label prefHeight="40.0" prefWidth="71.0" styleClass="textNavBar" text="Business">
+                        <Label fx:id="business" prefHeight="40.0" prefWidth="71.0" styleClass="textNavBar" text="Business">
                             <padding>
                                 <Insets left="10.0" top="20.0" />
                             </padding>

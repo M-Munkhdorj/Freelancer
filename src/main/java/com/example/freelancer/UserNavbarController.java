@@ -17,16 +17,31 @@ import java.util.ResourceBundle;
 
 public class UserNavbarController implements Initializable {
     @FXML
-    Button btnLogout;
+    private Button btnLogout;
+
+    @FXML
+    private Label business;
 
     @FXML
     private StackPane contentArea;
 
     @FXML
-    private Label graphicsDesign;
+    private Label digitalMarketing;
 
     @FXML
     private Label freelanceSystem;
+
+    @FXML
+    private Label graphicsDesign;
+
+    @FXML
+    private Label programmingTech;
+
+    @FXML
+    private Label videoAnimations;
+
+    @FXML
+    private Label writingTranslation;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btnLogout.setOnAction(new EventHandler<ActionEvent>() {
@@ -42,18 +57,7 @@ public class UserNavbarController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        graphicsDesign.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                try {
-                    Parent fxml = FXMLLoader.load(getClass().getResource("user-fxml/user-digital-service.fxml"));
-                    contentArea.getChildren().removeAll();
-                    contentArea.getChildren().setAll(fxml);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+
         freelanceSystem.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -66,6 +70,82 @@ public class UserNavbarController implements Initializable {
                 }
             }
         });
+
+        graphicsDesign.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    Parent fxml = FXMLLoader.load(getClass().getResource("services/service-graphics-design.fxml"));
+                    contentArea.getChildren().removeAll();
+                    contentArea.getChildren().setAll(fxml);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        digitalMarketing.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    Parent fxml = FXMLLoader.load(getClass().getResource("services/service-digital-marketing.fxml"));
+                    contentArea.getChildren().removeAll();
+                    contentArea.getChildren().setAll(fxml);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        writingTranslation.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    Parent fxml = FXMLLoader.load(getClass().getResource("services/service-writing-translation.fxml"));
+                    contentArea.getChildren().removeAll();
+                    contentArea.getChildren().setAll(fxml);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        videoAnimations.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    Parent fxml = FXMLLoader.load(getClass().getResource("services/service-video-animation.fxml"));
+                    contentArea.getChildren().removeAll();
+                    contentArea.getChildren().setAll(fxml);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        programmingTech.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    Parent fxml = FXMLLoader.load(getClass().getResource("services/service-programming-tech.fxml"));
+                    contentArea.getChildren().removeAll();
+                    contentArea.getChildren().setAll(fxml);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        business.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    Parent fxml = FXMLLoader.load(getClass().getResource("services/service-business.fxml"));
+                    contentArea.getChildren().removeAll();
+                    contentArea.getChildren().setAll(fxml);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
     }
 
     public void setUserInformation(String username) {
