@@ -51,7 +51,7 @@ public class FreelancerNavbarController implements Initializable {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 try {
-                    Parent fxml = FXMLLoader.load(getClass().getResource("freelancer-fxml/freelancer-digital-service.fxml"));
+                    Parent fxml = FXMLLoader.load(getClass().getResource("services/service-graphics-design.fxml"));
                     contentArea.getChildren().removeAll();
                     contentArea.getChildren().setAll(fxml);
                 } catch (IOException e) {

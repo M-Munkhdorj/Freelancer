@@ -15,7 +15,7 @@
             <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="300.0" spacing="10.0">
                <children>
                   <Text fill="#667080" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Username" />
-                  <TextField fx:id="tfUsername" prefHeight="50.0" prefWidth="300.0" promptText="John Doe" />
+                  <TextField fx:id="tfUsername" prefHeight="50.0" prefWidth="271.0" promptText="John Doe" />
                   <Text fill="#667080" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Password" />
                   <TextField fx:id="tfPassword" prefHeight="50.0" prefWidth="300.0" />
                   <Button fx:id="btnContinue" mnemonicParsing="false" onMousePressed="#onContinueButtonPressed" onMouseReleased="#onContinueButtonReleased" prefHeight="50.0" prefWidth="300.0" styleClass="buttonContinue" text="Continue">

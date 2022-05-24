@@ -9,14 +9,19 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancer.Freelancer.FreelancerCreateServiceController">
     <children>
-        <Text fill="#667080" layoutX="79.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Description" />
-        <Button fx:id="btnContinue" layoutX="81.0" layoutY="577.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" styleClass="buttonContinue" text="Continue" />
-        <TextField fx:id="tfPassword" layoutX="81.0" layoutY="410.0" prefHeight="50.0" prefWidth="300.0" />
-        <Text fill="#667080" layoutX="79.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Type of Service" />
-        <Text fill="#667080" layoutX="81.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Price" />
-      <TextArea layoutX="81.0" layoutY="158.0" prefHeight="215.0" prefWidth="451.0" />
-      <Text fill="#667080" layoutX="82.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Delivery Time" />
-      <TextField fx:id="tfPassword1" layoutX="81.0" layoutY="500.0" prefHeight="50.0" prefWidth="300.0" />
-      <ChoiceBox fx:id="choiceBoxService" layoutX="80.0" layoutY="81.0" prefWidth="150.0" />
+        <Text fill="#667080" layoutX="76.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Description" />
+        <Button fx:id="btnContinue" layoutX="76.0" layoutY="624.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" styleClass="buttonContinue" text="Continue" />
+        <TextField fx:id="tfDeliveryTime" layoutX="76.0" layoutY="388.0" prefHeight="40.0" prefWidth="250.0" />
+        <Text fill="#667080" layoutX="79.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Type of Service" />
+        <Text fill="#667080" layoutX="76.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Price" />
+      <TextArea fx:id="txtAreaDescription" layoutX="80.0" layoutY="210.0" prefHeight="138.0" prefWidth="405.0" />
+      <Text fill="#667080" layoutX="76.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Delivery Time" />
+      <TextField fx:id="tfPrice" layoutX="76.0" layoutY="461.0" prefHeight="40.0" prefWidth="250.0" />
+      <ChoiceBox fx:id="choiceBoxServiceType" layoutX="80.0" layoutY="76.0" prefWidth="150.0" />
+      <TextField fx:id="tfServiceName" layoutX="79.0" layoutY="135.0" prefHeight="40.0" prefWidth="250.0" />
+      <Text fill="#667080" layoutX="79.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Service name" wrappingWidth="83.3671875" />
+      <Button fx:id="btnChooseImage" layoutX="292.0" layoutY="537.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" text="Choose image" />
+      <TextField fx:id="tfImage" layoutX="76.0" layoutY="538.0" />
+      <Text fill="#667080" layoutX="76.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textEmail" text="Image" />
     </children>
 </AnchorPane>
