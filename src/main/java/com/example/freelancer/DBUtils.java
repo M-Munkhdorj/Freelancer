@@ -17,13 +17,13 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class DBUtils {
+    // scene uurchluh
     public static void changeScene(ActionEvent event, String fxmlFile, String title, String username, String email){
         Parent root = null;
         if (username != null && email != null) {
             try {
                 FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlFile));
                 root = loader.load();
-//                MainController mainSceneController = loader.getController();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -40,7 +40,7 @@ public class DBUtils {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
+    //user burtgeh
     public static void signUpUser(ActionEvent event,String email,String username,String password,String userType) {
         Connection connection = null;
         PreparedStatement psInsert = null;
@@ -178,7 +178,7 @@ public class DBUtils {
             }
         }
     }
-
+    //user log in hiih
     public static void logInUser(ActionEvent event, String username, String password) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -255,7 +255,7 @@ public class DBUtils {
             }
         }
     }
-
+    //ajliin zariin medeelliig hadgalah
     public static void saveService(ActionEvent event,
                                    String serviceType,
                                    String serviceName,
@@ -306,7 +306,7 @@ public class DBUtils {
             }
         }
     }
-
+    //ajliin medeelel avah
     public static ObservableList<Service> getService(String serviceType) {
         ObservableList<Service> serviceData = FXCollections.observableArrayList();
         Connection connection = null;
